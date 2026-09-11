@@ -1,0 +1,8 @@
+{
+  "x64-only": true,
+  "msix-manifest": true,
+  "refresh-symbol": true,
+  "appearance-flyout": true,
+  "horizontal-scroll": true,
+  "windows-ci": true
+}

@@ -1,0 +1,18 @@
+name: windows-msix
+on: workflow_dispatch
+jobs:
+ build:
+  runs-on: windows-latest
+  steps:
+   - uses: actions/checkout@v4
+   - uses: actions/setup-dotnet@v4
+     with: { dotnet-version: '10.0.x' }
+   - name: Restore
+     run: dotnet restore SmartOrganizer.sln -r win-x64
+   - name: Compile C# and XAML, create unsigned MSIX
+     run: dotnet build SmartOrganizer.sln -c Release -p:Platform=x64 -p:AppxBundle=Never -p:UapAppxPackageBuildMode=StoreUpload
+   - name: Upload build evidence
+     uses: actions/upload-artifact@v4
+     with:
+      name: SmartOrganizer-x64-MSIX-output
+      path: src/SmartOrganizer.WinUI/AppPackages/**

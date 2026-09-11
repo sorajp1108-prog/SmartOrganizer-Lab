@@ -1,0 +1,31 @@
+name: Windows Store candidate
+on: { workflow_dispatch: {} }
+jobs:
+ store-candidate:
+  runs-on: windows-latest
+  timeout-minutes: 35
+  steps:
+   - uses: actions/checkout@v4
+   - uses: actions/setup-dotnet@v4
+     with: { dotnet-version: '10.0.x' }
+   - name: Apply Store identity from protected variables
+     shell: pwsh
+     env:
+      STORE_IDENTITY_NAME: ${{ vars.STORE_IDENTITY_NAME }}
+      STORE_PUBLISHER: ${{ vars.STORE_PUBLISHER }}
+      STORE_PUBLISHER_DISPLAY_NAME: ${{ vars.STORE_PUBLISHER_DISPLAY_NAME }}
+     run: |
+      $o=[ordered]@{identityName=$env:STORE_IDENTITY_NAME;publisher=$env:STORE_PUBLISHER;publisherDisplayName=$env:STORE_PUBLISHER_DISPLAY_NAME;displayName='SmartOrganizer';version='0.17.0.0'}
+      $o|ConvertTo-Json|Set-Content store/store-identity.json
+      ./eng/apply-store-identity.ps1
+   - name: Build Store upload candidate
+     shell: pwsh
+     run: ./eng/build-store-upload.ps1
+   - name: Upload evidence
+     if: always()
+     uses: actions/upload-artifact@v4
+     with: { name: store-candidate-evidence, path: evidence/**, if-no-files-found: warn }
+   - name: Upload Store candidate
+     if: success()
+     uses: actions/upload-artifact@v4
+     with: { name: SmartOrganizer-store-upload-candidate, path: '**/AppPackages/**' }

@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework><Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings></PropertyGroup>
+ <ItemGroup><Compile Include="../../src/SmartOrganizer.WinUI/Operations/OperationModels.cs" Link="Operations/OperationModels.cs"/><Compile Include="../../src/SmartOrganizer.WinUI/Operations/IOperationService.cs" Link="Operations/IOperationService.cs"/><Compile Include="../../src/SmartOrganizer.WinUI/Operations/OperationJournal.cs" Link="Operations/OperationJournal.cs"/><Compile Include="../../src/SmartOrganizer.WinUI/Operations/SafeOperationService.cs" Link="Operations/SafeOperationService.cs"/></ItemGroup>
+</Project>

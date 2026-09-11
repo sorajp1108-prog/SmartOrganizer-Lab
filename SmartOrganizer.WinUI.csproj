@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup>
+  <OutputType>WinExe</OutputType>
+  <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+  <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+  <RootNamespace>SmartOrganizer.WinUI</RootNamespace>
+  <UseWinUI>true</UseWinUI>
+  <Nullable>enable</Nullable>
+  <ImplicitUsings>enable</ImplicitUsings>
+  <Platforms>x64</Platforms>
+  <Platform>x64</Platform>
+  <PlatformTarget>x64</PlatformTarget>
+  <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+  <WindowsPackageType>MSIX</WindowsPackageType>
+  <EnableMsixTooling>true</EnableMsixTooling>
+  <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
+  <GenerateAppInstallerFile>false</GenerateAppInstallerFile>
+ </PropertyGroup>
+ <ItemGroup>
+  <PackageReference Include="Microsoft.WindowsAppSDK" Version="2.4.0" />
+  <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.4948" />
+ </ItemGroup>
+</Project>
