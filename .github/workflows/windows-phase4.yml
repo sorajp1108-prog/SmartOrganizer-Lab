@@ -1,0 +1,49 @@
+name: Windows Phase 4 evidence
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  verify:
+    runs-on: windows-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Show environment
+        shell: pwsh
+        run: |
+          dotnet --info
+          Get-ChildItem -Force
+
+      - name: Build and run operation tests
+        shell: pwsh
+        run: |
+          dotnet build SmartOrganizer.OperationTests.csproj -c Release
+          dotnet run --project SmartOrganizer.OperationTests.csproj -c Release
+
+      - name: Build WinUI project
+        shell: pwsh
+        run: |
+          dotnet restore SmartOrganizer.WinUI.csproj -r win-x64
+          dotnet build SmartOrganizer.WinUI.csproj -c Release -p:Platform=x64 -p:AppxBundle=Never -p:AppxPackageSigningEnabled=false
+
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: SmartOrganizer-Windows-test-results
+          path: |
+            **/bin/**
+            **/obj/**
+          if-no-files-found: warn
