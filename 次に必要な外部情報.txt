@@ -1,0 +1,10 @@
+この版はWindows CI/MSIX生成直前まで進めた準備版です。
+本番署名またはMicrosoft Store提出には、所有者本人が取得する次の値が必要です。
+
+1. Microsoft Storeで予約したIdentity Name
+2. Store Publisher ID (CN=...)
+3. Publisher display name
+4. Store掲載用アイコン
+5. Store開発者アカウント
+
+これらがない状態で、本番署名済みMSIXを捏造しません。

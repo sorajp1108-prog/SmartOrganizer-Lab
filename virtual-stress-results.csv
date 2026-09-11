@@ -1,0 +1,16 @@
+﻿group,case,result,detail,elapsed_ms,peak_bytes
+ui_async,generation_guard_20000,PASS,applied=14 latest=20000,0,0
+ui_async,forbidden_.Result,PASS,count=0,0,0
+ui_async,forbidden_.Wait(,PASS,count=0,0,0
+ui_async,forbidden_GetResult,PASS,count=0,0,0
+ui_async,forbidden_Parallel.ForEach,PASS,count=0,0,0
+hardening,single_search_refresh,PASS,,0,0
+hardening,commit_non_cancelable,PASS,,0,0
+hardening,safe_partial_cleanup,PASS,,0,0
+hardening,operation_serialization,PASS,,0,0
+safe_operations,copy_hash_commit_20000,PASS,failures=0,37619.66292200009,0
+safe_operations,partial_cleanup,PASS,remaining=0,0,0
+duplicates,stream_hash_20000,PASS,groups=1000 min=20 max=20,7630.200537000064,0
+duplicates,sparse_64MiB_stream,PASS,python_peak_delta=173998,217.72278399998868,173998
+usn,continuity_20000,PASS,"{'FULL': 12000, 'NONE': 4000, 'DELTA': 4000}",0,0
+journal,atomic_replace_20000,PASS,last=19999 backup=True,57292.48638100012,0

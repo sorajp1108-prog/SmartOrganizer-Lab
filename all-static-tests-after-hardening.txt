@@ -1,0 +1,322 @@
+===== tests/phase1_static_validation.py =====
+PASS v0121 layout
+PASS one shared scroll
+PASS column drag
+PASS column persistence
+PASS theme persistence
+PASS density persistence
+PASS window persistence
+PASS keyboard
+PASS refresh symbol
+PASS appearance menu
+PASS minimum window
+PASS no forced column fit
+PASS 12 checks
+===== tests/phase2_static_validation.py =====
+PASS read-only catalog
+PASS no write operations
+PASS categories
+PASS search debounce
+PASS filters
+PASS sort
+PASS watcher
+PASS cancellation
+PASS open default
+PASS history available
+PASS phase1 horizontal
+PASS phase1 columns
+PASS 12 checks
+===== tests/phase3_static_validation.py =====
+PASS preview required
+PASS explicit confirmation
+PASS no overwrite
+PASS staging
+PASS sha256
+PASS move revalidation
+PASS cancel cleanup
+PASS copy undo guarded
+PASS move undo collision guard
+PASS atomic journal
+PASS recovery candidates
+PASS phase2 retained
+PASS phase1 retained
+PASS 13 checks
+===== tests/phase4_static_audit.py =====
+PASS xaml handlers resolved
+PASS x64 only
+PASS phase1 retained
+PASS phase2 retained
+PASS phase3 retained
+PASS core test project
+PASS windows build script
+PASS msix lifecycle script
+PASS ui checklist
+PASS evidence workflow
+PASS no signing secret committed
+51f0b93584475f26da23189c0ab6a6e79a1140bd80ea5a702b3699006d8b131e .github/workflows/windows-msix.yml
+2ce8fb15108a8322a48b76f708e8065067b12568146dbdd2d2c8945af56e16e2 .github/workflows/windows-phase4.yml
+70a645d3cd04bce1df3d39e40ed436b066e71e3df585f5208520a4374978b432 .github/workflows/windows-store-candidate.yml
+6fd46b1f003fd14490b015a5e4d3782164967c1456476deb46ca83046828b417 README_状態と手順.txt
+389ebc018f2fd726513d51bfbc35a9a693054e481057e5b74e27f8746bedfb74 SmartOrganizer.sln
+4c7b980164fddaf1b6ce8e0cc33a007ee5be5f191c9400f0efa8f56b68a5c0d4 docs/Phase1完了範囲.md
+25c404dd44b71e6967d27aec3defda5e3fd0c6a00eb7208e752f4a20c37cbaed docs/Phase2完了範囲.md
+cfc2e0974186b18e92b5497d5a43f27a808bce582b98d1ff545db3a87358c227 docs/Phase3完了範囲.md
+d725b936d88ca1a2f0cf827bd7473fc642f6a9bfcafadd9f9b4aa6623d8096a9 docs/Phase4実行状況.md
+56d6cd439034fb19b068744ef166aacbe49c094e1834bd0f9efe47c912c9386e docs/Phase5実行状況.md
+d6626f650181609ad9d3fb3f41e03487b5c37f480a26200089e0ecff99db01af docs/Phase6A完了範囲.md
+a8d0a5cbc250ee5799927b9d89de765ba8472187753fe6b53cc2fbbaeec472b0 docs/Phase6B完了範囲.md
+4c081c0361eb3dec2aa2b6192195811e395ee19f7a7e3ca3c6c07645acd8b718 docs/Phase6C堅牢化追加.md
+e734f720d2794dc3010dac3f9c2beeb892192a305954ebd12d17b48636623de8 docs/Phase6C完了範囲.md
+aa8fa20a2ec47ac54329d3309228b73a0739357365a5460fe33d27ed9fd3dcfb docs/Phase6D完了範囲.md
+3453745d219f1a4b816b4b8a7290b692a6278ae757d90057834f09389aae567e docs/Phase7B完了範囲.md
+29e326a21d5e6709586572840c88218087e6051802b7ad606e47e56a032a66fb docs/Phase7C完了範囲.md
+e653a026b8fcf5d1f8cef09f1968dfde93638c68356b918dc3db981d4c1b8b1b docs/Phase7D完了範囲.md
+2eb550193ab384de6e8a232cd960b1c1e58c65eb0c77b11d99a9928b2b7277a5 docs/Phase7E完了範囲.md
+e0fef9878e2514b3dc9fa56c1cf9786d3daae056f859ac5a1c41b55792fcf57d docs/次に必要な外部情報.txt
+337b4a76ca42e15df7df0b9753c461ee6121d6cda494896f872a497a4712df6f eng/apply-store-identity.ps1
+3799ae0d53e22f3f73b69c90b0a5ea8307228c502a94a1a28f1ec570f3af866a eng/build-store-upload.ps1
+7125c1fbe3080dfeb5e477473a7ae97d24f0aa3af72c582b507ddca151329fda eng/msix-install-test.ps1
+08c22dc761a7f574846c54612fb747b9fd887600ed78551a2793f8fa7e86f135 eng/phase4-windows.ps1
+cfd88054b6e1c3ee93c3c6fc09b146d68073500834ae12f1cf08f26cb3e40d35 eng/ui-manual-checklist.md
+e5aa0eebf19961493cb7a4465d0154829ca3b5d13dbca48377bd1047f2905205 eng/validate-store-readiness.ps1
+3b28cb0fc2c2e7054d02315b9b9c01bd3bc4f7d8beda9423edfcd0b81efa6b2e src/SmartOrganizer.WinUI/App.xaml
+f6ff6311ad1c1b7b0c75e42057a3f0d8d9e2ef99e1042c1efcf0718a3d6ec784 src/SmartOrganizer.WinUI/App.xaml.cs
+4d7ef1c8e2ca25168afd586e2010f464508c819ba5c7be7c51830bda01d707e7 src/SmartOrganizer.WinUI/MainWindow.xaml
+853fb498c2a0e7d1a03031927a407c086f13033570ba4b76aba18191324c04e9 src/SmartOrganizer.WinUI/MainWindow.xaml.cs
+e7585fea19a785e7075ba054276fbc07b78f3d739d404758576993a75ceeb811 src/SmartOrganizer.WinUI/Models/ChangeTrackingModels.cs
+6ad264eced9228994269427918fb81d575ae40cb4cbc33aedc8a8e1b6cb449dd src/SmartOrganizer.WinUI/Models/CleanupModels.cs
+d55b0cc771fe39c58a483ce1f97c40b05c3dca6070cd2046aa3c56f3bf868357 src/SmartOrganizer.WinUI/Models/ColumnWidths.cs
+a7eaba002b1e05b4b12e9a2367c699de10ffc8642154d67b29ef9d6e9cd08bdf src/SmartOrganizer.WinUI/Models/FileIdentityModels.cs
+1a406aceb8c174033e078401da50861b39e7009751e3dfc0cd4a0359c8995052 src/SmartOrganizer.WinUI/Models/FileRow.cs
+b37ef1bce887a93397381df8be1cddf39f7904104edbe74adadf6fabc29d6a49 src/SmartOrganizer.WinUI/Models/StructureModels.cs
+b1f38fd2ef2ba17e003202c4431b760e3123fc786e6f5f363c668630d3d71b2b src/SmartOrganizer.WinUI/Operations/BatchOperationModels.cs
+bc836568d9c6c997d3fa79a2db62c23323c8a862a2f48b1bb6a570c1d6f854b9 src/SmartOrganizer.WinUI/Operations/BatchOperationService.cs
+645076d594f976f97eb4d719d6273aebd10cc22dcd848d5fa254d32929bb018d src/SmartOrganizer.WinUI/Operations/IOperationService.cs
+6b749df098aece80accb33c6afa8717568d4a12121a5beb1932b03070bbb69d2 src/SmartOrganizer.WinUI/Operations/OperationJournal.cs
+2084c4f3a038b8164a38cc1c9a6181931bc2c766348760c65d806de03655317f src/SmartOrganizer.WinUI/Operations/OperationModels.cs
+80e73114221423a4525255474b4b3bf3162a69a8671463438d75eb7d424fbfec src/SmartOrganizer.WinUI/Operations/ProtectedOperationService.cs
+a5edd1eaedcae8abe63460cccf8fa55663b0029b55580d642100192a8d9b30e6 src/SmartOrganizer.WinUI/Operations/SafeOperationService.cs
+c772d8158986c5d5cda5d92a553b2e4cdabc0d940bfecaaf1e9363430964ffec src/SmartOrganizer.WinUI/Operations/UndoCandidateService.cs
+934ff2641aa7ed5eebfb99adf10b842238fd15aed9ff92a06f679fe612dd1423 src/SmartOrganizer.WinUI/Package.appxmanifest
+914ed8c75cf8de71588e2ca2e6b4cbf7a1e278dd571e19973d2d675bebfe2fc6 src/SmartOrganizer.WinUI/Services/AdvancedOperationSettings.cs
+c61ea0f2a524e5e67c41a7cafd4a2baf7353484df417fa13daf3628b44ae2210 src/SmartOrganizer.WinUI/Services/AppearanceService.cs
+e50e9290a1f87a9a378400ee45e61fed3dd57138b316c188f674a44732e03df0 src/SmartOrganizer.WinUI/Services/ChangeTrackingCheckpointStore.cs
+8c91b2a28becdcf5d20c1ded74df78a548bf0d4e15be72195bca6b4bd344aa60 src/SmartOrganizer.WinUI/Services/ChangeTrackingCoordinator.cs
+528603caa54c451d333b6313baec19f49f279bcf4761ab51de629908e6759e1a src/SmartOrganizer.WinUI/Services/CleanupCandidateEngine.cs
+33200d02bebc0f35a57dc5b04c238a3270cd7fbd92b120d1aecb8e8117b45668 src/SmartOrganizer.WinUI/Services/ColumnLayoutService.cs
+cf103b2df18d59f6120aea40ea89cb5b6ccbe87aa8292a33d42443c3167a6771 src/SmartOrganizer.WinUI/Services/DuplicateCandidateService.cs
+d206ffe29e2a28dd67ee8f360e206b19253d1b4ad2bb8a90c9bc0c69b1b925ad src/SmartOrganizer.WinUI/Services/FileCatalogWatcher.cs
+fcfc3de64d90402fe20f2e561c2a66ab45ec898977a306c5a4889aaf582400ce src/SmartOrganizer.WinUI/Services/FileIdentityService.cs
+f0b4f075d932768d7e9f2a78841e03d05695b06cf6aa36980a5a4fb8b7a5da78 src/SmartOrganizer.WinUI/Services/FileOriginService.cs
+7802a4e4f590f9819d0589c8ba77980880e7c058b89d11c491e2527b0cc3f5dd src/SmartOrganizer.WinUI/Services/FirstSeenStore.cs
+4d1f8fd5d0e0ab2888b6f545694c33f548e33d1912e214ab14e58e9f8abbf8b8 src/SmartOrganizer.WinUI/Services/FolderSettingsService.cs
+cf585ee2da015a7cfa0203e324b4978b07f0e435d86065629d3314d1f5e1208c src/SmartOrganizer.WinUI/Services/FutureFolderAccessService.cs
+5bba64e4d75b3133278c4076c04438ef40426302e1ebcbf410ac57c91e37e6a4 src/SmartOrganizer.WinUI/Services/HistoryReader.cs
+1b5e39420523742c3a7daf3056fc6f01b40d7381b8e4035d089b065c191fa5d4 src/SmartOrganizer.WinUI/Services/IReadOnlyFileCatalog.cs
+68f193786a3ef7fed0459633dd37dc2a4d3f460a7a9736d0e897618791841af0 src/SmartOrganizer.WinUI/Services/JournalContinuityEvaluator.cs
+2372d1b2c7e7c14b95728edbb275a59f47c6ec56e6e39f53990d6b451413cd1b src/SmartOrganizer.WinUI/Services/LazyOriginLoader.cs
+6b13e556e25f8520c77fdc6d96c15c81defd82b81ebed214cc6fa4426c3375c2 src/SmartOrganizer.WinUI/Services/ReadOnlyFileCatalog.cs
+d53fc5c91454317011bc7bfa89616a712b6edfe7bffd51f2a1d085695785393f src/SmartOrganizer.WinUI/Services/SafeFileEnumerator.cs
+c1c6f1a4f5bc17ba5b2535c6b6bd8712434de039a07fe23a06eef06bf0d779ad src/SmartOrganizer.WinUI/Services/SettingsService.cs
+3c45f1e8f3c710a540e99df70d41d7d48087bb184eb9d6857e9ee5d3fee97dab src/SmartOrganizer.WinUI/Services/StructureAnalyzer.cs
+b912ff00943e9640110e208ac236d24dea433feb86c21b5d96114ec95cd0f0de src/SmartOrganizer.WinUI/Services/StructureIndex.cs
+64dff7ccc907a7311d7f934193f83d21f794014569bc9aeb8285248b01276e8f src/SmartOrganizer.WinUI/Services/SystemProtectionPolicy.cs
+12cd261df15e5a6254ba0ad3f7bc0e8db70aed2b694919c5dc365ff85e245f03 src/SmartOrganizer.WinUI/Services/UsnJournalReader.cs
+5a65f58ba44ba6165148cc133889bf9a0a3dc649dec367530973e9efabe5789a src/SmartOrganizer.WinUI/Services/WindowPlacementService.cs
+ac0a3aadfe8a959754f5f45a74d03b88f942bd95cc9570aff8fcc30613b8b20c src/SmartOrganizer.WinUI/Services/WindowsFileIdentityProvider.cs
+145e39e350a04c6a38acae71deae16d8bf897f98451fe8cfc72648c9d5be1cb8 src/SmartOrganizer.WinUI/SmartOrganizer.WinUI.csproj
+7a367acc6edb033c32f8f7c5a808dcfd20f8e2c35e4c47dad744aac9fa228137 src/SmartOrganizer.WinUI/ViewModels/MainViewModel.cs
+f185cfbee4276c864c151e23da97f1ade22dfb765c32b080e612e643c86e1779 store/assets-placeholders/README.txt
+31241e2afe650a49fce6776a67fad470ab8142f1a56a73b1c7e8bc649874330e store/listing-ja/キーワード.txt
+51208aa8fc6ad70ca3a1d800c4208904e83afa1d0b7f63e2a68f73ec20542e0b store/listing-ja/リリースノート.txt
+3d95fc45f9b042182d8c62df9ef0862d46bd640b6df403e16e4237dd5eb63aa4 store/listing-ja/機能.txt
+03c8bd10390ed8074d6de291b479c5e44203856b3f1026dbb8b630248873095b store/listing-ja/短い説明.txt
+b4d35f5899f5477458a73a309945df8e17b910b6fb112c3e781b83ca519c9a8b store/listing-ja/説明.txt
+374ad99dee2d46755efef900d907c02151688b7b9c5421b8cd1af84323fc0edc store/partner-center-checklist.md
+e82e28943bc8f4dae1ff3b7e9047f5f6028b5241514669c852abbaef91dae224 store/privacy-policy-draft.md
+9447107c8e63872a1abd1f7b95fc9d1a3d8f828994ce1ba5df8acc7659dcf29c store/store-identity.template.json
+34506981523ec2669f53b7b7d28159b7fdc7fe739c27b8ca2d80b9035a51cef4 store/support-page-draft.md
+f93d1bf7cd9d378ada67dbf97a5abba0c4a6920ed96e44670f411723258c586a tests/SmartOrganizer.OperationTests/Program.cs
+8b38bff546022e38f1692facc96b1c7c47a97005611d3ed859ce0aa61285cea6 tests/SmartOrganizer.OperationTests/SmartOrganizer.OperationTests.csproj
+954d0afbd53022faeab823f4a638c32b639c034553e0b2854fb893e095a76432 tests/__pycache__/lab_virtual_stress.cpython-312.pyc
+537c02d4537e149ba3d2369526ed912e3d55204ea191e65292bfd80d5e7a0960 tests/lab_virtual_stress.py
+a6e2da4abf33901a532e3c5a7df34bf36f393dc17cb5b4583612b55fc2186455 tests/phase1_static_validation.py
+1d0ca9f3f4eb12d4faa69cd71f4f1c297a1b1e17b9109f49ef688fbcbf5b4f36 tests/phase2_static_validation.py
+5f22ccf2a28ffabde968b170bda02a0792bfd07726a701060bf2c759e4573944 tests/phase3_static_validation.py
+75f9a9fc42cdbf1ff5b79a77258ea3d2f7f1fb52ac23551dd3f86ade16599a91 tests/phase4_static_audit.py
+58fb2395d448fff3d2bb43cdfacb73710623c9c194d066f85b973c6a31b27d6d tests/phase5_static_validation.py
+c8e0dc663408ef83753f881d778bf14d735c8594a69e09fb0e7bbaf3772c9a3b tests/phase6a_static_validation.py
+0dad90548850af17dc7531098f7e0d67881960855ded561a0ce90a0b12ddbccc tests/phase6b_static_validation.py
+4799953cac4dfffefd3cd0fd5da7b91d1b98153033199b23f1bf44f514ade213 tests/phase6c_hardening_validation.py
+607456eece4c22d75c997e3ec25a664a98d6665d4f3df17668d315b09257cacb tests/phase6c_static_validation.py
+eb05e77c813f829a875e2849ac4f92b19a1bf5d15be189b76b6f5464146c2a04 tests/phase6d_static_validation.py
+719d6d6c789c371f382bed97da2c3ed4baf33b90f05e0ad509205d2dda970202 tests/phase7b_static_validation.py
+4a27022a0bcced718eb8b0f7d6952fd318e0981385ecb185f8f2d2188e21438a tests/phase7c_static_validation.py
+0ef6961d67c8150d96be919c87089d324c2669ffafb814856ac41d76dfed76ad tests/phase7d_static_validation.py
+8e53b117e42ab1d1af9a5a1a10f94448c67cbfa8816863d3b263a27ba28d471c tests/phase7e_logic_validation.py
+f132d14a928acfb535770c3ad8530dc69d6e8e8e62b7bae7c69f4a71743ea3fb tests/phase7e_performance_fault_validation.py
+a558eee9b0406de2627bc3b078dcb7c5e8cfc04a66bd096f8ec05ef849aa78a4 tests/phase7e_static_validation.py
+5264231f2721daba4a6ed7b8a02938ecdf1317ee54519db0f43f1de6c830bc37 tests/static_validation.json
+===== tests/phase5_static_validation.py =====
+PASS store identity template
+PASS placeholder guarded
+PASS identity apply script
+PASS store readiness validation
+PASS store upload build
+PASS production signing disabled locally
+PASS protected CI variables
+PASS no pfx committed
+PASS listing drafts
+PASS privacy draft
+PASS support draft
+PASS partner checklist
+PASS single user entry
+PASS phase4 retained
+PASS 14 checks
+===== tests/phase6a_static_validation.py =====
+PASS ui dispatcher
+PASS generation guard
+PASS watcher overflow
+PASS 64KB watcher buffer
+PASS journal backup restore
+PASS startup recovery
+PASS recovery inspection
+PASS state details
+PASS source delete failure distinct
+PASS cancel button
+PASS cancel boundary
+PASS phase5 retained
+PASS 12 checks
+===== tests/phase6b_static_validation.py =====
+PASS context menu
+PASS cross session undo
+PASS undo confirmation
+PASS details
+PASS multiple selection
+PASS batch planning
+PASS per item results
+PASS skip conflicts
+PASS rename conflicts
+PASS no overwrite
+PASS reserved names
+PASS phase6a retained
+PASS phase5 retained
+PASS 13 checks
+===== tests/phase6c_hardening_validation.py =====
+PASS safe folder stack
+PASS reparse skipped
+PASS watcher sync
+PASS future access
+PASS duplicate pre post
+PASS offline excluded
+PASS catalog safe enumeration
+PASS active filters visible
+PASS clear filters
+PASS phase6c retained
+PASS phase6b retained
+PASS 11 checks
+===== tests/phase6c_static_validation.py =====
+PASS folder change
+PASS folder persistence
+PASS quick access
+PASS official origin data
+PASS no browser filename guess
+PASS subfolder opt in
+PASS subfolder filter
+PASS recent files
+PASS large files
+PASS duplicate staged check
+PASS duplicate exact hash
+PASS duplicate no deletion
+PASS zero-byte excluded
+PASS phase6b retained
+PASS phase6a retained
+PASS 15 checks
+===== tests/phase6d_static_validation.py =====
+PASS lazy origin
+PASS origin not initial
+PASS duplicate groups
+PASS duplicate progress
+PASS large threshold ui
+PASS recent days ui
+PASS first seen
+PASS first seen atomic
+PASS paging
+PASS page origin only
+PASS generation retained
+PASS cloud exclusion retained
+PASS safe duplicates retained
+PASS 13 checks
+===== tests/phase7b_static_validation.py =====
+PASS two modes
+PASS default standard
+PASS settings entry
+PASS advanced setting
+PASS standard refuses
+PASS advanced members
+PASS confirm before operation
+PASS remember checkbox
+PASS persistent trust
+PASS confirmation choices
+PASS reset trust
+PASS system never bypassed
+PASS safe engine retained
+PASS no auto execute
+PASS simple list retained
+PASS 15 checks
+===== tests/phase7c_static_validation.py =====
+PASS volume id
+PASS file id
+PASS combined identity
+PASS identity ledger
+PASS legacy migration
+PASS rename tracking
+PASS same volume continuity
+PASS path fallback
+PASS cross volume hash
+PASS bounded hashing
+PASS failure isolation
+PASS catalog integration
+PASS atomic ledger
+PASS version
+PASS usn deferred
+PASS 15 checks
+===== tests/phase7d_static_validation.py =====
+PASS candidate kinds
+PASS temporary
+PASS incomplete
+PASS logs cache
+PASS old versions
+PASS orphan cautious
+PASS installer
+PASS blocks excluded
+PASS reason confidence
+PASS no automatic deletion
+PASS virtual view
+PASS catalog mapping
+PASS details only
+PASS simple ui
+PASS version
+PASS 15 checks
+===== tests/phase7e_logic_validation.py =====
+PASS 5 journal continuity scenarios
+===== tests/phase7e_performance_fault_validation.py =====
+PASS synthetic_records=100000 elapsed_ms=43.07 fault_scenarios=5
+===== tests/phase7e_static_validation.py =====
+PASS probe
+PASS checkpoint
+PASS delta read
+PASS record parsing
+PASS truncation
+PASS journal replacement
+PASS full rescan
+PASS non ntfs fallback
+PASS periodic scan
+PASS no elevation
+PASS failure isolation
+PASS metrics
+PASS view integration
+PASS performance fault tests
+PASS honest boundary
+PASS version
+PASS 16 checks

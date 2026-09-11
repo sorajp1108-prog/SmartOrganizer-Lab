@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "xaml handlers resolved": true,
+    "x64 only": true,
+    "phase1 retained": true,
+    "phase2 retained": true,
+    "phase3 retained": true,
+    "core test project": true,
+    "windows build script": true,
+    "msix lifecycle script": true,
+    "ui checklist": true,
+    "evidence workflow": true,
+    "no signing secret committed": true
+  },
+  "missing_handlers": []
+}

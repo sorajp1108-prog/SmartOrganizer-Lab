@@ -1,0 +1,12 @@
+{"cases": 11, "passes": 11, "failures": 0, "scenario_iterations": 10000, "elapsed_seconds": 43.358493425000006, "python_peak_bytes": 2831590}
+ui_async | generation_guard_2000 | PASS | applied=5 latest=2000
+ui_async | forbidden_.Result | PASS | count=0
+ui_async | forbidden_.Wait( | PASS | count=0
+ui_async | forbidden_GetResult | PASS | count=0
+ui_async | forbidden_Parallel.ForEach | PASS | count=0
+safe_operations | copy_hash_commit_2000 | PASS | failures=0
+safe_operations | partial_cleanup | PASS | remaining=0
+duplicates | stream_hash_2000 | PASS | groups=100 min=20 max=20
+duplicates | sparse_1GiB_stream | PASS | python_peak_delta=1477914
+usn | continuity_2000 | PASS | {'FULL': 1200, 'NONE': 400, 'DELTA': 400}
+journal | atomic_replace_2000 | PASS | last=1999 backup=True

@@ -1,0 +1,7 @@
+{
+  "identityName": "REPLACE_WITH_PARTNER_CENTER_IDENTITY_NAME",
+  "publisher": "CN=REPLACE_WITH_PARTNER_CENTER_PUBLISHER_ID",
+  "publisherDisplayName": "REPLACE_WITH_PUBLISHER_DISPLAY_NAME",
+  "displayName": "SmartOrganizer",
+  "version": "0.17.0.0"
+}

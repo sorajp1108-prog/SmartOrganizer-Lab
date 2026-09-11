@@ -1,0 +1,8 @@
+{
+  "cases": 15,
+  "passes": 15,
+  "failures": 0,
+  "scenario_iterations": 100000,
+  "elapsed_seconds": 105.89443796900014,
+  "python_peak_bytes": 14449006
+}

@@ -1,0 +1,16 @@
+{
+  "store identity template": true,
+  "placeholder guarded": true,
+  "identity apply script": true,
+  "store readiness validation": true,
+  "store upload build": true,
+  "production signing disabled locally": true,
+  "protected CI variables": true,
+  "no pfx committed": true,
+  "listing drafts": true,
+  "privacy draft": true,
+  "support draft": true,
+  "partner checklist": true,
+  "single user entry": true,
+  "phase4 retained": true
+}
